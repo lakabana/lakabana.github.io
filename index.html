@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#14110e">
+  <meta name="description" content="Carta digital: platos regionales, a la carta, marinos, sopas y bebidas.">
+  <title>Carta</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2314110e'/%3E%3Cpath d='M22 78C28 46 50 24 80 20C76 50 56 72 22 78Z' fill='%233a9a52'/%3E%3Cpath d='M22 78Q50 52 80 20' stroke='%23f2c14e' stroke-width='4' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="verde" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="#1d6b33"/>
+        <stop offset="1" stop-color="#4cb565"/>
+      </linearGradient>
+      <symbol id="hoja" viewBox="0 0 100 100">
+        <path d="M6 94C14 50 46 14 96 4C88 52 56 86 6 94Z" fill="url(#verde)"/>
+        <path d="M6 94Q48 54 96 4" stroke="#0f3f1d" stroke-width="2.5" fill="none" opacity=".7"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="cabecera">
+    <svg class="hojas hojas-izq" viewBox="0 0 200 200" aria-hidden="true">
+      <use href="#hoja" x="-20" y="10" width="140" height="140" transform="rotate(-25 50 80)"/>
+      <use href="#hoja" x="10" y="-30" width="150" height="150" transform="rotate(10 85 45)"/>
+      <use href="#hoja" x="-40" y="40" width="120" height="120" transform="rotate(-60 20 100)"/>
+    </svg>
+    <svg class="hojas hojas-der" viewBox="0 0 200 200" aria-hidden="true">
+      <use href="#hoja" x="-20" y="10" width="140" height="140" transform="rotate(-25 50 80)"/>
+      <use href="#hoja" x="10" y="-30" width="150" height="150" transform="rotate(10 85 45)"/>
+      <use href="#hoja" x="-40" y="40" width="120" height="120" transform="rotate(-60 20 100)"/>
+    </svg>
+    <h1 class="titulo-dorado" id="nombre"></h1>
+    <p class="eslogan" id="eslogan"></p>
+  </header>
+
+  <nav class="categorias" id="categorias" aria-label="Categorías de la carta"></nav>
+
+  <div class="buscador">
+    <label class="buscador-caja">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span class="sr">Buscar en la carta</span>
+      <input id="buscar" type="search" placeholder="Buscar un plato o bebida…" autocomplete="off">
+    </label>
+  </div>
+
+  <main id="carta" class="carta"></main>
+  <p id="sin-resultados" class="sin-resultados" hidden>No encontramos ese plato. Prueba con otra palabra.</p>
+
+  <footer class="pie" id="pie">
+    <p class="pie-nota">Precios en soles (S/). Los platos marcados “Consultar” se cotizan con nuestro personal.</p>
+  </footer>
+
+  <script src="menu.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
