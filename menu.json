@@ -51,6 +51,16 @@
           "nombre": "Doncella frita con tacacho",
           "detalle": "Doncella, tacacho y ensalada",
           "precio": 35
+        },
+        {
+          "nombre": "Doncella apanada",
+          "detalle": "Arroz, pieza de doncella apanada, yuca y ensalada",
+          "precio": 30
+        },
+        {
+          "nombre": "Paiche apanado",
+          "detalle": "Arroz, pieza de paiche apanado, yuca y ensalada",
+          "precio": 30
         }
       ]
     },
@@ -147,16 +157,6 @@
           "nombre": "Corvina frita",
           "detalle": "Arroz, corvina, yuca y ensalada",
           "precio": 25
-        },
-        {
-          "nombre": "Doncella apanada",
-          "detalle": "Arroz, pieza de doncella apanada, yuca y ensalada",
-          "precio": 30
-        },
-        {
-          "nombre": "Paiche apanado",
-          "detalle": "Arroz, pieza de paiche apanado, yuca y ensalada",
-          "precio": 30
         }
       ]
     },
