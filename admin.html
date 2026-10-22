@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#14110e">
+  <title>Editar carta · La Kabaña</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2314110e'/%3E%3Cpath d='M22 78C28 46 50 24 80 20C76 50 56 72 22 78Z' fill='%233a9a52'/%3E%3Cpath d='M22 78Q50 52 80 20' stroke='%23f2c14e' stroke-width='4' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="barra-titulo">
+      <span class="marca">La Kabaña</span>
+      <span class="barra-sub">Editor de la carta</span>
+    </div>
+    <div class="barra-acciones">
+      <a class="boton boton-claro" href="./" target="_blank" rel="noopener">Ver carta</a>
+      <button class="boton boton-claro" id="salir" type="button" hidden>Salir</button>
+    </div>
+  </header>
+
+  <!-- Pantalla de acceso -->
+  <main id="acceso" class="contenedor" hidden>
+    <section class="tarjeta">
+      <h1>Entrar al editor</h1>
+      <p>Para guardar cambios, este dispositivo necesita tu <strong>clave de GitHub</strong>. Se pide una sola vez y queda guardada solo aquí.</p>
+
+      <form id="form-acceso" class="form-acceso">
+        <label for="clave">Clave de GitHub</label>
+        <input id="clave" type="password" autocomplete="off" spellcheck="false" placeholder="ghp_… o github_pat_…" required>
+        <button class="boton boton-oro" type="submit" id="entrar">Entrar</button>
+        <p class="error" id="error-acceso" role="alert" hidden></p>
+      </form>
+
+      <details class="ayuda">
+        <summary>¿Cómo consigo la clave?</summary>
+        <ol>
+          <li>Abre <a href="https://github.com/settings/tokens/new?description=Editor%20carta%20La%20Kaba%C3%B1a&amp;scopes=public_repo" target="_blank" rel="noopener">este enlace de GitHub</a> (inicia sesión si te lo pide).</li>
+          <li>En <strong>Expiration</strong> elige <strong>No expiration</strong>.</li>
+          <li>Deja marcada la casilla <strong>public_repo</strong> y baja hasta el botón verde <strong>Generate token</strong>.</li>
+          <li>Copia la clave que aparece (empieza con <code>ghp_</code>) y pégala arriba.</li>
+        </ol>
+        <p class="nota">No compartas esta clave con nadie: con ella se puede modificar la carta.</p>
+      </details>
+    </section>
+  </main>
+
+  <!-- Editor -->
+  <main id="editor" class="contenedor" hidden>
+    <div class="guardar-barra" id="guardar-barra">
+      <p class="estado" id="estado" role="status">Sin cambios</p>
+      <button class="boton boton-oro" id="guardar" type="button" disabled>Guardar cambios</button>
+    </div>
+
+    <details class="tarjeta datos">
+      <summary><span>Datos del restaurante</span></summary>
+      <div class="campos" id="datos-restaurante"></div>
+    </details>
+
+    <div id="secciones"></div>
+
+    <button class="boton boton-linea boton-ancho" id="agregar-seccion" type="button">+ Agregar sección</button>
+  </main>
+
+  <p class="cargando contenedor" id="cargando">Cargando…</p>
+
+  <div class="aviso" id="aviso" role="status" hidden></div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -69,12 +69,14 @@
   </div>
   <button onclick="window.print()">Imprimir</button>
 
-  <script src="menu.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script>
     // El QR apunta a la carta (index.html en la misma carpeta que esta página).
     const destino = new URL("./", location.href).href;
-    document.getElementById("nombre").textContent = RESTAURANTE.nombre;
+    fetch("menu.json", { cache: "no-cache" })
+      .then((r) => r.json())
+      .then((datos) => { document.getElementById("nombre").textContent = datos.restaurante.nombre; })
+      .catch(() => {});
     document.getElementById("url").textContent = destino;
     new QRCode(document.getElementById("qr"), {
       text: destino,

@@ -1,0 +1,464 @@
+{
+  "restaurante": {
+    "nombre": "La Kabaña",
+    "eslogan": "Sabores de la Amazonía",
+    "moneda": "S/",
+    "whatsapp": "51992681294",
+    "direccion": "Jr. Independencia 570",
+    "horario": "Horario: 9:00 a. m. – 10:00 p. m."
+  },
+  "secciones": [
+    {
+      "id": "regionales",
+      "titulo": "Platos Regionales",
+      "platos": [
+        {
+          "nombre": "Juane",
+          "detalle": "Arroz especial, gallina, huevo y aceituna",
+          "precio": 20
+        },
+        {
+          "nombre": "Cecina con tacacho",
+          "detalle": "Cecina, tacacho y salsa criolla",
+          "precio": 30
+        },
+        {
+          "nombre": "Chorizo regional con tacacho",
+          "detalle": "Chorizo regional, tacacho y salsa criolla",
+          "precio": 25
+        },
+        {
+          "nombre": "Arroz chaufa amazónico",
+          "detalle": "Arroz, cecina, chorizo, cebolla china, tortilla y kión",
+          "precio": 30
+        }
+      ]
+    },
+    {
+      "id": "carta",
+      "titulo": "Platos a la Carta",
+      "platos": [
+        {
+          "nombre": "Tacu tacu a la cubana",
+          "detalle": "Arroz, frejol, plátano frito y huevo frito",
+          "precio": 18
+        },
+        {
+          "nombre": "Tacu tacu con lomito",
+          "detalle": "Arroz, frejol, carne, cebolla, tomate y culantro",
+          "precio": 30
+        },
+        {
+          "nombre": "Lomo saltado",
+          "detalle": "Arroz, carne, papas, cebolla, tomate y culantro",
+          "precio": 25
+        },
+        {
+          "nombre": "Saltado de pollo",
+          "detalle": "Arroz, pollo, papas fritas, cebolla, tomate y culantro",
+          "precio": 25
+        },
+        {
+          "nombre": "Saltado de hígado",
+          "detalle": "Arroz, hígado, papas, cebolla y tomate",
+          "precio": 25
+        },
+        {
+          "nombre": "Saltado de molleja",
+          "detalle": "Arroz, molleja, papas, cebolla, tomate y culantro",
+          "precio": 25
+        },
+        {
+          "nombre": "Tallarín saltado",
+          "detalle": "Tallarín, carne, cebolla, tomate y culantro",
+          "precio": 20
+        },
+        {
+          "nombre": "Chicharrón de chancho",
+          "detalle": "Arroz, yuca y ensalada",
+          "precio": 25
+        },
+        {
+          "nombre": "Pollo apanado",
+          "detalle": "Arroz, pollo apanado, papas fritas y ensalada",
+          "precio": 25
+        },
+        {
+          "nombre": "Pollo frito",
+          "detalle": "Arroz, pollo frito, papas fritas y ensalada",
+          "precio": 25
+        },
+        {
+          "nombre": "Pechuga de pollo",
+          "detalle": "Arroz, pechuga, papas fritas y ensalada",
+          "precio": 30
+        },
+        {
+          "nombre": "Pollo con verduras",
+          "detalle": "Arroz, pollo, pimiento, holantao y col china",
+          "precio": 20
+        },
+        {
+          "nombre": "Aeropuerto",
+          "detalle": "Arroz, pollo o carne, verduras chinas y fideos chinos",
+          "precio": 20
+        },
+        {
+          "nombre": "Tortilla de pollo o carne",
+          "detalle": "Arroz, papas, cebolla, tomate y culantro",
+          "precio": 20
+        },
+        {
+          "nombre": "Bisteck al jugo",
+          "detalle": "Arroz, bisteck, papas fritas y ensalada",
+          "precio": 25
+        },
+        {
+          "nombre": "Palometa dorada",
+          "detalle": "Arroz, yuca, palometa y ensalada",
+          "precio": 20
+        },
+        {
+          "nombre": "Jurel frito",
+          "detalle": "Arroz, yuca, pieza de jurel y ensalada",
+          "precio": 20
+        },
+        {
+          "nombre": "Corvina frita",
+          "detalle": "Arroz, corvina, yuca y ensalada",
+          "precio": 25
+        },
+        {
+          "nombre": "Doncella apanada",
+          "detalle": "Arroz, pieza de doncella apanada, yuca y ensalada",
+          "precio": 30
+        },
+        {
+          "nombre": "Paiche apanado",
+          "detalle": "Arroz, pieza de paiche apanado, yuca y ensalada",
+          "precio": 30
+        }
+      ]
+    },
+    {
+      "id": "marinos",
+      "titulo": "Platos Marinos",
+      "platos": [
+        {
+          "nombre": "Ceviche",
+          "detalle": "Pescado, cebolla, camote, choclo, canchita y yuca",
+          "precio": 30
+        },
+        {
+          "nombre": "Ceviche mixto",
+          "detalle": "Pescado, mariscos, cebolla, camote, choclo y yuca",
+          "precio": 45
+        },
+        {
+          "nombre": "Leche de tigre",
+          "detalle": "Pescado, cebolla, camote, choclo, canchita y yuca",
+          "precio": 25
+        },
+        {
+          "nombre": "Leche de tigre especial",
+          "detalle": "Pescado, chicharrón, langostino, cebolla, camote, choclo, canchita y yuca",
+          "precio": 30
+        },
+        {
+          "nombre": "Chicharrón de pescado",
+          "detalle": "Pescado, yuca frita, ensalada criolla y mayonesa",
+          "precio": 30
+        },
+        {
+          "nombre": "Arroz con mariscos",
+          "detalle": "Arroz, mariscos y queso rallado",
+          "precio": 30
+        },
+        {
+          "nombre": "Arroz chaufa con mariscos",
+          "detalle": "Arroz, mariscos, cebolla china y huevo",
+          "precio": 30
+        },
+        {
+          "nombre": "Dúo Marino",
+          "detalle": "Ceviche con chicharrón de pescado o arroz con mariscos",
+          "precio": 40
+        },
+        {
+          "nombre": "Trío Marino",
+          "detalle": "Ceviche, chicharrón de pescado y arroz con mariscos",
+          "precio": 48
+        }
+      ]
+    },
+    {
+      "id": "pollos",
+      "titulo": "Pollos",
+      "platos": [
+        {
+          "nombre": "Milanesa de pollo",
+          "detalle": "Arroz, pechuga de pollo, papas fritas y ensalada",
+          "precio": 30
+        },
+        {
+          "nombre": "Pollo a la plancha con tacacho",
+          "detalle": "Pollo a la plancha, tacacho y ensalada",
+          "precio": 35
+        },
+        {
+          "nombre": "Suprema de pollo",
+          "detalle": "Suprema de pollo, papas fritas y ensalada",
+          "precio": 25
+        },
+        {
+          "nombre": "Chicharrón de pollo",
+          "detalle": "Chicharrón de pollo, yuca frita y ensalada",
+          "precio": 30
+        },
+        {
+          "nombre": "Arroz chaufa de pollo",
+          "detalle": "Arroz, pollo o carne, cebolla china y huevo",
+          "precio": 18
+        }
+      ]
+    },
+    {
+      "id": "carnes",
+      "titulo": "Carnes",
+      "platos": [
+        {
+          "nombre": "Bisteck a la plancha",
+          "detalle": "Arroz, bisteck, papas fritas y ensalada",
+          "precio": 30
+        },
+        {
+          "nombre": "Milanesa de carne",
+          "detalle": "Arroz, milanesa de carne, papas fritas y ensalada",
+          "precio": 30
+        },
+        {
+          "nombre": "Bisteck a la chorrillana",
+          "detalle": "Arroz, bisteck, papas fritas, cebolla y huevo",
+          "precio": 30
+        },
+        {
+          "nombre": "Bisteck a lo pobre",
+          "detalle": "Arroz, bisteck, papas, huevo, plátano frito y ensalada",
+          "precio": 35
+        }
+      ]
+    },
+    {
+      "id": "pescados",
+      "titulo": "Pescados",
+      "platos": [
+        {
+          "nombre": "Paiche a la milanesa",
+          "detalle": "Arroz, paiche, papas fritas y ensalada",
+          "precio": 30
+        },
+        {
+          "nombre": "Paiche frito con tacacho",
+          "detalle": "Paiche, tacacho y ensalada",
+          "precio": 35
+        },
+        {
+          "nombre": "Doncella a la milanesa",
+          "detalle": "Arroz, doncella, papas fritas y ensalada",
+          "precio": 30
+        },
+        {
+          "nombre": "Doncella frita con tacacho",
+          "detalle": "Doncella, tacacho y ensalada",
+          "precio": 35
+        }
+      ]
+    },
+    {
+      "id": "sopas",
+      "titulo": "Sopas",
+      "platos": [
+        {
+          "nombre": "Sopa del día",
+          "detalle": "Sopa del menú",
+          "precio": 6
+        },
+        {
+          "nombre": "Sopa a la minuta",
+          "detalle": "Carne, cabello de ángel, aderezo, leche y huevo",
+          "precio": 15
+        },
+        {
+          "nombre": "Sopa criolla",
+          "detalle": "Carne, cabello de ángel, leche y huevo frito",
+          "precio": 15
+        },
+        {
+          "nombre": "Sopa sustancia",
+          "detalle": "Carne, cabello de ángel y aderezo",
+          "precio": 15
+        },
+        {
+          "nombre": "Dieta de pollo",
+          "detalle": "Sopa, pollo y verduras",
+          "precio": 15
+        },
+        {
+          "nombre": "Caldo de gallina",
+          "detalle": "Caldo, fideos, gallina, huevo, yuca o plátano",
+          "precio": 15
+        }
+      ]
+    },
+    {
+      "id": "guarniciones",
+      "titulo": "Guarniciones",
+      "platos": [
+        {
+          "nombre": "Arroz blanco",
+          "precio": 5
+        },
+        {
+          "nombre": "Arroz chaufa",
+          "precio": 10
+        },
+        {
+          "nombre": "Papas fritas",
+          "precio": 10
+        },
+        {
+          "nombre": "Yuca frita",
+          "precio": 8
+        },
+        {
+          "nombre": "Maduro frito",
+          "precio": 8
+        },
+        {
+          "nombre": "Patacones",
+          "precio": 10
+        },
+        {
+          "nombre": "Tacacho",
+          "precio": 10
+        },
+        {
+          "nombre": "Tequeños",
+          "precio": 10
+        },
+        {
+          "nombre": "Ensalada",
+          "precio": 10
+        },
+        {
+          "nombre": "Cecina",
+          "precio": 20
+        },
+        {
+          "nombre": "Chorizo regional",
+          "precio": 20
+        }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "titulo": "Bebidas",
+      "platos": [
+        {
+          "nombre": "Vaso de refresco",
+          "precio": 4
+        },
+        {
+          "nombre": "Jarra mediana 1 L",
+          "precio": 15
+        },
+        {
+          "nombre": "Jarra grande 1.5 L",
+          "precio": 18
+        },
+        {
+          "nombre": "Gaseosa mediana",
+          "precio": 4
+        },
+        {
+          "nombre": "Gaseosa 600 ml",
+          "precio": 6
+        },
+        {
+          "nombre": "Gordita",
+          "precio": 6
+        },
+        {
+          "nombre": "Gaseosa 1 L",
+          "precio": 8
+        },
+        {
+          "nombre": "Gaseosa 2 L",
+          "precio": 13
+        },
+        {
+          "nombre": "Gaseosa 2.25 L",
+          "precio": 15
+        },
+        {
+          "nombre": "Gaseosa 3 L",
+          "precio": 17
+        }
+      ]
+    },
+    {
+      "id": "bebidas-fuertes",
+      "titulo": "Bebidas Fuertes",
+      "platos": [
+        {
+          "nombre": "Golden lata 355 ml",
+          "precio": 5
+        },
+        {
+          "nombre": "Golden vidrio 620 ml",
+          "precio": 8
+        },
+        {
+          "nombre": "Pilsen lata 355 ml",
+          "precio": 6
+        },
+        {
+          "nombre": "Pilsen vidrio",
+          "precio": 8
+        },
+        {
+          "nombre": "San Juan lata 355 ml",
+          "precio": 6
+        },
+        {
+          "nombre": "San Juan vidrio 620 ml",
+          "precio": 9
+        },
+        {
+          "nombre": "Cusqueña lata 355 ml",
+          "precio": 8
+        },
+        {
+          "nombre": "Cusqueña vidrio 620 ml",
+          "precio": 11
+        },
+        {
+          "nombre": "Coronita 210 ml",
+          "precio": 6
+        },
+        {
+          "nombre": "Corona 355 ml",
+          "precio": 8
+        },
+        {
+          "nombre": "Budweiser 343 ml",
+          "precio": 8
+        },
+        {
+          "nombre": "Vino",
+          "precio": 80
+        }
+      ]
+    }
+  ]
+}

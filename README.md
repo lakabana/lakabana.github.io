@@ -1,20 +1,29 @@
-# Carta digital del restaurante
+# Carta digital de La Kabaña
 
-Página web con la carta del restaurante, publicada gratis con GitHub Pages (siempre en línea).
+Carta del restaurante publicada gratis con GitHub Pages (siempre en línea).
 
-- **Carta:** `index.html`
-- **Código QR para imprimir:** `qr.html` (abre la página y pulsa *Imprimir*)
+- **Carta:** https://lakabana.github.io/
+- **Editor de la carta:** https://lakabana.github.io/admin.html
+- **Código QR para imprimir:** https://lakabana.github.io/qr.html
 
-## Cómo cambiar precios o platos
+## Cómo cambiar la carta
 
-Todo está en un solo archivo: **`menu.js`**.
+Entra al **editor** (`admin.html`). Desde ahí puedes:
 
-1. En GitHub, abre el archivo `menu.js` y pulsa el ícono del lápiz (*Edit this file*).
-2. Cambia lo que necesites:
-   - **Precio:** cambia el número después de `precio:` (ej. `precio: 25`).
-   - **Sin precio:** `precio: null` muestra "Consultar".
-   - **Plato agotado:** agrega `agotado: true` al plato.
-   - **Nombre del restaurante, WhatsApp, dirección y horario:** al inicio del archivo, en `RESTAURANTE`.
-3. Pulsa **Commit changes**. La página se actualiza sola en 1 o 2 minutos.
+- cambiar precios, nombres y descripciones;
+- agregar o eliminar platos;
+- mover un plato a otra sección (menú **Sección**) o cambiar su orden (↑ ↓);
+- marcar un plato como **Agotado**;
+- agregar, renombrar u ordenar secciones;
+- cambiar el nombre, WhatsApp, dirección y horario.
 
-Cuida las comas y comillas: cada plato va entre `{ }` y termina en `},`.
+Al terminar, pulsa **Guardar cambios**. La carta pública se actualiza en 1 o 2 minutos.
+
+La primera vez, el editor pide una **clave de GitHub**. Abajo del botón *Entrar* explica cómo crearla. Queda guardada solo en ese dispositivo.
+
+## Archivos
+
+- `menu.json`: los datos de la carta (los escribe el editor).
+- `index.html`, `app.js`, `styles.css`: la carta pública.
+- `admin.html`, `admin.js`, `admin.css`: el editor.
+- `qr.html`: la tarjeta con el código QR.
