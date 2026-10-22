@@ -31,6 +31,16 @@
           "nombre": "Arroz chaufa amazónico",
           "detalle": "Arroz, cecina, chorizo, cebolla china, tortilla y kión",
           "precio": 30
+        },
+        {
+          "nombre": "Paiche a la milanesa",
+          "detalle": "Arroz, paiche, papas fritas y ensalada",
+          "precio": 30
+        },
+        {
+          "nombre": "Paiche frito con tacacho",
+          "detalle": "Paiche, tacacho y ensalada",
+          "precio": 35
         }
       ]
     },
@@ -252,16 +262,6 @@
       "id": "pescados",
       "titulo": "Pescados",
       "platos": [
-        {
-          "nombre": "Paiche a la milanesa",
-          "detalle": "Arroz, paiche, papas fritas y ensalada",
-          "precio": 30
-        },
-        {
-          "nombre": "Paiche frito con tacacho",
-          "detalle": "Paiche, tacacho y ensalada",
-          "precio": 35
-        },
         {
           "nombre": "Doncella a la milanesa",
           "detalle": "Arroz, doncella, papas fritas y ensalada",
