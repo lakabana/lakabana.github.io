@@ -157,8 +157,33 @@
           "nombre": "Corvina frita",
           "detalle": "Arroz, corvina, yuca y ensalada",
           "precio": 25
+        },
+        {
+          "nombre": "Bisteck a la plancha",
+          "detalle": "Arroz, bisteck, papas fritas y ensalada",
+          "precio": 30
+        },
+        {
+          "nombre": "Milanesa de carne",
+          "detalle": "Arroz, milanesa de carne, papas fritas y ensalada",
+          "precio": 30
+        },
+        {
+          "nombre": "Bisteck a la chorrillana",
+          "detalle": "Arroz, bisteck, papas fritas, cebolla y huevo",
+          "precio": 30
+        },
+        {
+          "nombre": "Bisteck a lo pobre",
+          "detalle": "Arroz, bisteck, papas, huevo, plátano frito y ensalada",
+          "precio": 35
         }
       ]
+    },
+    {
+      "id": "carnes",
+      "titulo": "Carnes",
+      "platos": []
     },
     {
       "id": "marinos",
@@ -239,32 +264,6 @@
           "nombre": "Arroz chaufa de pollo",
           "detalle": "Arroz, pollo o carne, cebolla china y huevo",
           "precio": 18
-        }
-      ]
-    },
-    {
-      "id": "carnes",
-      "titulo": "Carnes",
-      "platos": [
-        {
-          "nombre": "Bisteck a la plancha",
-          "detalle": "Arroz, bisteck, papas fritas y ensalada",
-          "precio": 30
-        },
-        {
-          "nombre": "Milanesa de carne",
-          "detalle": "Arroz, milanesa de carne, papas fritas y ensalada",
-          "precio": 30
-        },
-        {
-          "nombre": "Bisteck a la chorrillana",
-          "detalle": "Arroz, bisteck, papas fritas, cebolla y huevo",
-          "precio": 30
-        },
-        {
-          "nombre": "Bisteck a lo pobre",
-          "detalle": "Arroz, bisteck, papas, huevo, plátano frito y ensalada",
-          "precio": 35
         }
       ]
     },
