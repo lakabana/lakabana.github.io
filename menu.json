@@ -177,8 +177,38 @@
           "nombre": "Bisteck a lo pobre",
           "detalle": "Arroz, bisteck, papas, huevo, plátano frito y ensalada",
           "precio": 35
+        },
+        {
+          "nombre": "Milanesa de pollo",
+          "detalle": "Arroz, pechuga de pollo, papas fritas y ensalada",
+          "precio": 30
+        },
+        {
+          "nombre": "Pollo a la plancha con tacacho",
+          "detalle": "Pollo a la plancha, tacacho y ensalada",
+          "precio": 35
+        },
+        {
+          "nombre": "Suprema de pollo",
+          "detalle": "Suprema de pollo, papas fritas y ensalada",
+          "precio": 25
+        },
+        {
+          "nombre": "Chicharrón de pollo",
+          "detalle": "Chicharrón de pollo, yuca frita y ensalada",
+          "precio": 30
+        },
+        {
+          "nombre": "Arroz chaufa de pollo o carne",
+          "detalle": "Arroz, pollo o carne, cebolla china y huevo",
+          "precio": 18
         }
       ]
+    },
+    {
+      "id": "pollos",
+      "titulo": "Pollos a la brasa",
+      "platos": []
     },
     {
       "id": "carnes",
@@ -233,37 +263,6 @@
           "nombre": "Trío Marino",
           "detalle": "Ceviche, chicharrón de pescado y arroz con mariscos",
           "precio": 48
-        }
-      ]
-    },
-    {
-      "id": "pollos",
-      "titulo": "Pollos",
-      "platos": [
-        {
-          "nombre": "Milanesa de pollo",
-          "detalle": "Arroz, pechuga de pollo, papas fritas y ensalada",
-          "precio": 30
-        },
-        {
-          "nombre": "Pollo a la plancha con tacacho",
-          "detalle": "Pollo a la plancha, tacacho y ensalada",
-          "precio": 35
-        },
-        {
-          "nombre": "Suprema de pollo",
-          "detalle": "Suprema de pollo, papas fritas y ensalada",
-          "precio": 25
-        },
-        {
-          "nombre": "Chicharrón de pollo",
-          "detalle": "Chicharrón de pollo, yuca frita y ensalada",
-          "precio": 30
-        },
-        {
-          "nombre": "Arroz chaufa de pollo",
-          "detalle": "Arroz, pollo o carne, cebolla china y huevo",
-          "precio": 18
         }
       ]
     },
