@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  // Se llenan desde menu.json (lo edita admin.html).
+  // Se llenan desde el menu.json de la carpeta de cada carta (lo edita admin.html).
   let restaurante = {};
   let secciones = [];
 
@@ -29,7 +29,6 @@
   // ---------- Cabecera y pie ----------
 
   function pintarCabecera() {
-    document.title = `${restaurante.nombre} · Carta`;
     document.getElementById("nombre").textContent = restaurante.nombre;
     const eslogan = document.getElementById("eslogan");
     eslogan.textContent = restaurante.eslogan || "";
@@ -172,8 +171,18 @@
     }
 
     pintarCabecera();
-    pintarCarta();
     pintarPie();
+
+    if (!secciones.some((s) => s.platos && s.platos.length)) {
+      document.getElementById("categorias").hidden = true;
+      document.querySelector(".buscador").hidden = true;
+      const aviso = document.getElementById("sin-resultados");
+      aviso.textContent = "Estamos preparando esta carta. ¡Vuelve pronto!";
+      aviso.hidden = false;
+      return;
+    }
+
+    pintarCarta();
     activarBusqueda();
     marcarCategoriaActiva();
   }

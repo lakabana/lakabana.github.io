@@ -1,0 +1,38 @@
+{
+  "restaurante": {
+    "nombre": "La Kabaña",
+    "eslogan": "Pollería",
+    "moneda": "S/",
+    "whatsapp": "51992681294",
+    "direccion": "Jr. Independencia 570",
+    "horario": "Horario: 9:00 a. m. – 10:00 p. m."
+  },
+  "secciones": [
+    {
+      "id": "pollos-a-la-brasa",
+      "titulo": "Pollos a la brasa",
+      "platos": [
+        {
+          "nombre": "1 pollo a la brasa",
+          "detalle": "Con papas fritas y ensalada",
+          "precio": null
+        },
+        {
+          "nombre": "1/2 pollo a la brasa",
+          "detalle": "Con papas fritas y ensalada",
+          "precio": null
+        },
+        {
+          "nombre": "1/4 de pollo a la brasa",
+          "detalle": "Con papas fritas y ensalada",
+          "precio": null
+        },
+        {
+          "nombre": "1/8 de pollo a la brasa",
+          "detalle": "Con papas fritas y ensalada",
+          "precio": null
+        }
+      ]
+    }
+  ]
+}

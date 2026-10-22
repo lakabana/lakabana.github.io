@@ -138,6 +138,32 @@ input.invalido { border-color: var(--rojo); background: #2a1210; }
 
 .cargando { color: var(--tenue); text-align: center; }
 
+/* ---------- Elegir qué carta se edita ---------- */
+
+.selector-carta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 4px;
+  margin-bottom: 28px;
+  border-radius: 12px;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+}
+.pestana {
+  min-height: 44px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--tenue);
+  font: 800 1rem "Nunito", sans-serif;
+  cursor: pointer;
+}
+.pestana[aria-pressed="true"] {
+  background: linear-gradient(180deg, var(--oro-claro), var(--oro) 60%, #d99a1e);
+  color: #2a1a04;
+}
+
 /* ---------- Barra de guardar ---------- */
 
 .guardar-barra {

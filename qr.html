@@ -61,8 +61,8 @@
 </head>
 <body>
   <div class="tarjeta">
-    <h1 id="nombre">Nuestra Carta</h1>
-    <p class="sub">Carta digital</p>
+    <h1 id="nombre">La Kabaña</h1>
+    <p class="sub">Restaurante · Pollería</p>
     <div id="qr"></div>
     <p class="escanea">Escanea y mira nuestra carta</p>
     <p class="url" id="url"></p>
@@ -71,12 +71,8 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script>
-    // El QR apunta a la carta (index.html en la misma carpeta que esta página).
+    // El QR apunta a la portada (index.html en la misma carpeta), donde se elige restaurante o pollería.
     const destino = new URL("./", location.href).href;
-    fetch("menu.json", { cache: "no-cache" })
-      .then((r) => r.json())
-      .then((datos) => { document.getElementById("nombre").textContent = datos.restaurante.nombre; })
-      .catch(() => {});
     document.getElementById("url").textContent = destino;
     new QRCode(document.getElementById("qr"), {
       text: destino,

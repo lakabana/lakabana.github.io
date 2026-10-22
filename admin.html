@@ -19,7 +19,7 @@
       <span class="barra-sub">Editor de la carta</span>
     </div>
     <div class="barra-acciones">
-      <a class="boton boton-claro" href="./" target="_blank" rel="noopener">Ver carta</a>
+      <a class="boton boton-claro" id="ver-carta" href="./" target="_blank" rel="noopener">Ver carta</a>
       <button class="boton boton-claro" id="salir" type="button" hidden>Salir</button>
     </div>
   </header>
@@ -52,13 +52,18 @@
 
   <!-- Editor -->
   <main id="editor" class="contenedor" hidden>
+    <div class="selector-carta" role="group" aria-label="Carta que estás editando">
+      <button type="button" class="pestana" data-carta="restaurante">Restaurante</button>
+      <button type="button" class="pestana" data-carta="polleria">Pollería</button>
+    </div>
+
     <div class="guardar-barra" id="guardar-barra">
       <p class="estado" id="estado" role="status">Sin cambios</p>
       <button class="boton boton-oro" id="guardar" type="button" disabled>Guardar cambios</button>
     </div>
 
     <details class="tarjeta datos">
-      <summary><span>Datos del restaurante</span></summary>
+      <summary><span>Datos del local</span></summary>
       <div class="campos" id="datos-restaurante"></div>
     </details>
 

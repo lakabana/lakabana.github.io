@@ -3,11 +3,19 @@
 
   // Dónde vive la carta en GitHub.
   const REPO = "lakabana/lakabana.github.io";
-  const ARCHIVO = "menu.json";
   const API = "https://api.github.com";
   const LLAVE_ALMACEN = "carta-editor-clave";
+  const LLAVE_CARTA = "carta-editor-actual";
+
+  // Cada carta tiene su carpeta con su propio menu.json.
+  const CARTAS = {
+    restaurante: { nombre: "Restaurante", archivo: "restaurante/menu.json", pagina: "restaurante/" },
+    polleria: { nombre: "Pollería", archivo: "polleria/menu.json", pagina: "polleria/" },
+  };
 
   let clave = leerClaveGuardada();
+  let cartaActual = leerAlmacen(LLAVE_CARTA);
+  if (!CARTAS[cartaActual]) cartaActual = "restaurante";
   let datos = null;          // { restaurante, secciones } tal como está en menu.json
   let sha = null;            // versión de menu.json que se cargó (GitHub la exige al guardar)
   let hayCambios = false;
@@ -38,15 +46,23 @@
 
   // ---------- Clave guardada en este dispositivo ----------
 
+  function leerAlmacen(llave) {
+    try { return localStorage.getItem(llave) || ""; } catch { return ""; }
+  }
+
+  function escribirAlmacen(llave, valor) {
+    try {
+      if (valor) localStorage.setItem(llave, valor);
+      else localStorage.removeItem(llave);
+    } catch { /* sin almacenamiento: el dato dura mientras la página esté abierta */ }
+  }
+
   function leerClaveGuardada() {
-    try { return localStorage.getItem(LLAVE_ALMACEN) || ""; } catch { return ""; }
+    return leerAlmacen(LLAVE_ALMACEN);
   }
 
   function recordarClave(valor) {
-    try {
-      if (valor) localStorage.setItem(LLAVE_ALMACEN, valor);
-      else localStorage.removeItem(LLAVE_ALMACEN);
-    } catch { /* sin almacenamiento: la clave dura mientras la página esté abierta */ }
+    escribirAlmacen(LLAVE_ALMACEN, valor);
   }
 
   // ---------- GitHub ----------
@@ -90,7 +106,7 @@
   }
 
   async function leerArchivo() {
-    const respuesta = await api(`/repos/${REPO}/contents/${ARCHIVO}`);
+    const respuesta = await api(`/repos/${REPO}/contents/${CARTAS[cartaActual].archivo}`);
     if (respuesta.status === 401) {
       const error = new Error("Tu clave ya no es válida. Ingresa una nueva.");
       error.claveInvalida = true;
@@ -162,7 +178,7 @@
     if (!datos.restaurante.nombre || !datos.restaurante.nombre.trim()) {
       $(".datos").open = true;
       $("#campo-nombre").focus();
-      return "Falta el nombre del restaurante.";
+      return "Falta el nombre en «Datos del local».";
     }
     for (const seccion of datos.secciones) {
       if (!seccion.titulo.trim()) {
@@ -209,9 +225,13 @@
     $("#guardar").disabled = true;
 
     try {
-      const respuesta = await api(`/repos/${REPO}/contents/${ARCHIVO}`, {
+      const respuesta = await api(`/repos/${REPO}/contents/${CARTAS[cartaActual].archivo}`, {
         method: "PUT",
-        body: JSON.stringify({ message: "Actualizar carta desde el editor", content: aBase64(texto), sha }),
+        body: JSON.stringify({
+          message: `Actualizar carta (${CARTAS[cartaActual].nombre}) desde el editor`,
+          content: aBase64(texto),
+          sha,
+        }),
       });
 
       if (respuesta.status === 409) {
@@ -285,7 +305,7 @@
     };
 
     $("#datos-restaurante").replaceChildren(
-      campo("nombre", "Nombre del restaurante"),
+      campo("nombre", "Nombre (título de la carta)"),
       campo("eslogan", "Frase debajo del nombre"),
       campo("whatsapp", "WhatsApp", "Celular, por ejemplo 992681294. Déjalo vacío para no mostrar el botón.", { inputmode: "tel" }),
       campo("direccion", "Dirección"),
@@ -513,6 +533,35 @@
     error.hidden = !mensaje;
   }
 
+  function marcarCartaActual() {
+    for (const pestana of document.querySelectorAll(".pestana")) {
+      pestana.setAttribute("aria-pressed", String(pestana.dataset.carta === cartaActual));
+    }
+    $("#ver-carta").href = CARTAS[cartaActual].pagina;
+  }
+
+  async function cambiarCarta(nueva) {
+    if (nueva === cartaActual || guardando) return;
+    if (hayCambios && !confirm(`Tienes cambios sin guardar en ${CARTAS[cartaActual].nombre}. ¿Cambiar de carta y perderlos?`)) return;
+    const anterior = cartaActual;
+    cartaActual = nueva;
+    escribirAlmacen(LLAVE_CARTA, nueva);
+    mostrar("cargando");
+    try {
+      await abrirEditor();
+    } catch (error) {
+      cartaActual = anterior;
+      escribirAlmacen(LLAVE_CARTA, anterior);
+      if (error.claveInvalida) {
+        salir(error.message);
+        return;
+      }
+      mostrar("editor");
+      marcarCartaActual();
+      avisar(error.message === "Failed to fetch" ? "Sin conexión a internet. Inténtalo otra vez." : error.message, "error");
+    }
+  }
+
   async function abrirEditor() {
     const archivo = await leerArchivo();
     sha = archivo.sha;
@@ -526,6 +575,7 @@
     pintarSecciones();
     ponerEstado("Sin cambios");
     $("#guardar").disabled = true;
+    marcarCartaActual();
     mostrar("editor");
   }
 
@@ -560,6 +610,10 @@
     if (hayCambios && !confirm("Tienes cambios sin guardar. ¿Salir de todos modos?")) return;
     salir();
   });
+
+  for (const pestana of document.querySelectorAll(".pestana")) {
+    pestana.addEventListener("click", () => cambiarCarta(pestana.dataset.carta));
+  }
 
   $("#guardar").addEventListener("click", guardar);
   $("#agregar-seccion").addEventListener("click", agregarSeccion);
