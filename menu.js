@@ -63,8 +63,8 @@ const CARTA = [
     platos: [
       { nombre: "Ceviche", detalle: "Pescado, cebolla, camote, choclo, canchita y yuca", precio: 30 },
       { nombre: "Ceviche mixto", detalle: "Pescado, mariscos, cebolla, camote, choclo y yuca", precio: 45 },
-      { nombre: "Leche de tigre", detalle: "Pescado, cebolla, camote, choclo, canchita y yuca", precio: 30 },
-      { nombre: "Leche de tigre especial", detalle: "Pescado, chicharrón, langostino, cebolla, camote, choclo, canchita y yuca", precio: 25 },
+      { nombre: "Leche de tigre", detalle: "Pescado, cebolla, camote, choclo, canchita y yuca", precio: 25 },
+      { nombre: "Leche de tigre especial", detalle: "Pescado, chicharrón, langostino, cebolla, camote, choclo, canchita y yuca", precio: 30 },
       { nombre: "Chicharrón de pescado", detalle: "Pescado, yuca frita, ensalada criolla y mayonesa", precio: 30 },
       { nombre: "Arroz con mariscos", detalle: "Arroz, mariscos y queso rallado", precio: 30 },
       { nombre: "Arroz chaufa con mariscos", detalle: "Arroz, mariscos, cebolla china y huevo", precio: 30 },
