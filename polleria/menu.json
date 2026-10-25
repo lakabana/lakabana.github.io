@@ -59,6 +59,37 @@
           "precio": 13
         }
       ]
+    },
+    {
+      "id": "salchipapa",
+      "titulo": "Salchipapa",
+      "platos": [
+        {
+          "nombre": "Salchipapa clasica",
+          "detalle": "Hot dog, papas fritas y ensalada",
+          "precio": 8
+        },
+        {
+          "nombre": "Salchipapa Especial",
+          "detalle": "Hot dog, Huevo, papas fritas y ensalada",
+          "precio": 10
+        },
+        {
+          "nombre": "Salchibrasa",
+          "detalle": "1/8 Pollo a la Brasa, Hot dog, papas fritas y ensalda",
+          "precio": 14
+        },
+        {
+          "nombre": "Salchibroaster",
+          "detalle": "Broaster, Hot dog, papas fritas y ensalada",
+          "precio": 14
+        },
+        {
+          "nombre": "Salchipapa La Kabaña",
+          "detalle": "Hot dog, Huevo, Chorizo, Queso, papas fritas y ensalada",
+          "precio": 18
+        }
+      ]
     }
   ]
 }
