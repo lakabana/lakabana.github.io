@@ -33,6 +33,17 @@
           "precio": null
         }
       ]
+    },
+    {
+      "id": "oferton",
+      "titulo": "OFERTÓN",
+      "platos": [
+        {
+          "nombre": "1 Pollo a la Brasa + 1 Gaseosa Guarana 3L",
+          "detalle": "Con papas fritas y ensalada",
+          "precio": 75
+        }
+      ]
     }
   ]
 }
