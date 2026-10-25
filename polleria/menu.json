@@ -90,6 +90,106 @@
           "precio": 18
         }
       ]
+    },
+    {
+      "id": "bebidas",
+      "titulo": "Bebidas",
+      "platos": [
+        {
+          "nombre": "Vaso de refresco",
+          "precio": 4
+        },
+        {
+          "nombre": "Jarra mediana 1 L",
+          "precio": 15
+        },
+        {
+          "nombre": "Jarra grande 1.5 L",
+          "precio": 18
+        },
+        {
+          "nombre": "Gaseosa mediana",
+          "precio": 4
+        },
+        {
+          "nombre": "Gaseosa 600 ml",
+          "precio": 6
+        },
+        {
+          "nombre": "Gordita",
+          "precio": 6
+        },
+        {
+          "nombre": "Gaseosa 1 L",
+          "precio": 8
+        },
+        {
+          "nombre": "Gaseosa 2 L",
+          "precio": 13
+        },
+        {
+          "nombre": "Gaseosa 2.25 L",
+          "precio": 15
+        },
+        {
+          "nombre": "Gaseosa 3 L",
+          "precio": 17
+        }
+      ]
+    },
+    {
+      "id": "bebidas-fuertes",
+      "titulo": "Bebidas Fuertes",
+      "platos": [
+        {
+          "nombre": "Golden lata 355 ml",
+          "precio": 5
+        },
+        {
+          "nombre": "Golden vidrio 620 ml",
+          "precio": 8
+        },
+        {
+          "nombre": "Pilsen lata 355 ml",
+          "precio": 6
+        },
+        {
+          "nombre": "Pilsen vidrio",
+          "precio": 8
+        },
+        {
+          "nombre": "San Juan lata 355 ml",
+          "precio": 6
+        },
+        {
+          "nombre": "San Juan vidrio 620 ml",
+          "precio": 9
+        },
+        {
+          "nombre": "Cusqueña lata 355 ml",
+          "precio": 8
+        },
+        {
+          "nombre": "Cusqueña vidrio 620 ml",
+          "precio": 11
+        },
+        {
+          "nombre": "Coronita 210 ml",
+          "precio": 6
+        },
+        {
+          "nombre": "Corona 355 ml",
+          "precio": 8
+        },
+        {
+          "nombre": "Budweiser 343 ml",
+          "precio": 8
+        },
+        {
+          "nombre": "Vino",
+          "precio": 80
+        }
+      ]
     }
   ]
 }
