@@ -15,22 +15,22 @@
         {
           "nombre": "1 pollo a la brasa",
           "detalle": "Con papas fritas y ensalada",
-          "precio": null
+          "precio": 68
         },
         {
           "nombre": "1/2 pollo a la brasa",
           "detalle": "Con papas fritas y ensalada",
-          "precio": null
+          "precio": 36
         },
         {
           "nombre": "1/4 de pollo a la brasa",
           "detalle": "Con papas fritas y ensalada",
-          "precio": null
+          "precio": 19
         },
         {
           "nombre": "1/8 de pollo a la brasa",
           "detalle": "Con papas fritas y ensalada",
-          "precio": null
+          "precio": 12
         }
       ]
     },
@@ -42,6 +42,21 @@
           "nombre": "1 Pollo a la Brasa + 1 Gaseosa Guarana 3L",
           "detalle": "Con papas fritas y ensalada",
           "precio": 75
+        },
+        {
+          "nombre": "1/2 Pollo a la Brasa + 1 Gaseosa Guarana 1.5L",
+          "detalle": "Con papas fritas y ensalada",
+          "precio": 42
+        },
+        {
+          "nombre": "1/4 Pollo a la Brasa + 1 Gaseosa Personal",
+          "detalle": "Con papas fritas y ensalada",
+          "precio": 20
+        },
+        {
+          "nombre": "1/8 Pollo a la Brasa + 1 Vaso de refresco",
+          "detalle": "Con papas fritas y ensalada",
+          "precio": 13
         }
       ]
     }
