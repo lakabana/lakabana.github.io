@@ -222,6 +222,14 @@ details.tarjeta > summary > span:first-child { flex: 1; min-width: 0; }
 .campo { margin-bottom: 12px; }
 .campo label { display: block; margin-bottom: 4px; font-weight: 700; font-size: .9rem; }
 .campo small { display: block; margin-top: 4px; color: var(--tenue); font-size: .8rem; }
+.subtitulo-campos {
+  margin: 20px 0 4px;
+  padding-top: 14px;
+  border-top: 1px solid var(--borde);
+  font-weight: 800;
+  color: var(--oro);
+}
+.nota-campos { margin: 0 0 12px; color: var(--tenue); font-size: .85rem; }
 
 .seccion-cabecera {
   display: flex;

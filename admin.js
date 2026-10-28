@@ -136,6 +136,31 @@
     return numeros.length === 9 ? `51${numeros}` : numeros;
   }
 
+  // Redes sociales: acepta el enlace completo, el enlace sin https:// o solo el usuario (@lakabana).
+  const REDES = [
+    { clave: "facebook", nombre: "Facebook", base: "https://www.facebook.com/" },
+    { clave: "instagram", nombre: "Instagram", base: "https://www.instagram.com/" },
+    { clave: "tiktok", nombre: "TikTok", base: "https://www.tiktok.com/@" },
+  ];
+
+  function limpiarRed(texto, base) {
+    const valor = String(texto || "").trim();
+    if (!valor) return "";
+    const usuario = valor.replace(/^@/, "");
+    // Un nombre de usuario solo tiene letras, números, puntos, guiones y guiones bajos.
+    if (/^[\w.-]+$/.test(usuario) && (valor.startsWith("@") || !usuario.includes("."))) return base + usuario;
+    return /^https?:\/\//i.test(valor) ? valor : `https://${valor}`;
+  }
+
+  function esEnlaceValido(texto) {
+    try {
+      const url = new URL(texto);
+      return (url.protocol === "https:" || url.protocol === "http:") && url.hostname.includes(".");
+    } catch {
+      return false;
+    }
+  }
+
   function completarIds() {
     const usados = new Set();
     for (const seccion of datos.secciones) {
@@ -158,6 +183,7 @@
         whatsapp: limpiarWhatsapp(r.whatsapp),
         direccion: (r.direccion || "").trim(),
         horario: (r.horario || "").trim(),
+        ...Object.fromEntries(REDES.map((red) => [red.clave, limpiarRed(r[red.clave], red.base)])),
       },
       secciones: datos.secciones.map((seccion) => ({
         id: seccion.id,
@@ -179,6 +205,14 @@
       $(".datos").open = true;
       $("#campo-nombre").focus();
       return "Falta el nombre en «Datos del local».";
+    }
+    for (const red of REDES) {
+      const enlace = limpiarRed(datos.restaurante[red.clave], red.base);
+      if (enlace && !esEnlaceValido(enlace)) {
+        $(".datos").open = true;
+        $(`#campo-${red.clave}`).focus();
+        return `El enlace de ${red.nombre} no es válido. Copia el enlace de tu página y pégalo completo.`;
+      }
     }
     for (const seccion of datos.secciones) {
       if (!seccion.titulo.trim()) {
@@ -309,7 +343,15 @@
       campo("eslogan", "Frase debajo del nombre"),
       campo("whatsapp", "WhatsApp", "Celular, por ejemplo 992681294. Déjalo vacío para no mostrar el botón.", { inputmode: "tel" }),
       campo("direccion", "Dirección"),
-      campo("horario", "Horario", "Por ejemplo: Horario: 9:00 a. m. – 10:00 p. m.")
+      campo("horario", "Horario", "Por ejemplo: Horario: 9:00 a. m. – 10:00 p. m."),
+      el("p", { class: "subtitulo-campos" }, "Redes sociales"),
+      el("p", { class: "nota-campos" },
+        cartaActual === "restaurante"
+          ? "Pega el enlace de cada página. Las redes del Restaurante salen en la portada (a donde lleva el QR) y al final de esta carta. Deja vacía la que no uses."
+          : "Pega el enlace de cada página. Salen al final de la carta de la Pollería. Deja vacía la que no uses."),
+      ...REDES.map((red) =>
+        campo(red.clave, red.nombre, `Por ejemplo: ${red.base}lakabana`, { inputmode: "url", spellcheck: "false" })
+      )
     );
   }
 

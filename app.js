@@ -51,6 +51,8 @@
           icono, "Escríbenos por WhatsApp")
       );
     }
+    const redes = window.pintarRedes && window.pintarRedes(restaurante);
+    if (redes) extras.push(redes);
     pie.prepend(...extras);
   }
 

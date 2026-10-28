@@ -17,7 +17,7 @@ Entra al **editor** y elige arriba **Restaurante** o **Pollería**. Desde ahí p
 - mover un plato a otra sección (menú **Sección**) o cambiar su orden (↑ ↓);
 - marcar un plato como **Agotado**;
 - agregar, renombrar u ordenar secciones;
-- cambiar el nombre, WhatsApp, dirección y horario de cada local.
+- cambiar el nombre, WhatsApp, dirección, horario y redes sociales (Facebook, Instagram, TikTok) de cada local. Las redes del Restaurante también salen en la portada.
 
 Al terminar, pulsa **Guardar cambios**. La carta pública se actualiza en 1 o 2 minutos.
 
@@ -27,6 +27,6 @@ La primera vez, el editor pide una **clave de GitHub**. Abajo del botón *Entrar
 
 - `index.html`: la portada para elegir restaurante o pollería.
 - `restaurante/` y `polleria/`: cada carta, con su `menu.json` (lo escribe el editor).
-- `app.js`, `styles.css`: compartidos por las dos cartas.
+- `app.js`, `redes.js`, `styles.css`: compartidos por las cartas y la portada.
 - `admin.html`, `admin.js`, `admin.css`: el editor.
 - `qr.html`: la tarjeta con el código QR.
