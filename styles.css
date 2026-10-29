@@ -49,16 +49,17 @@ body {
   padding: 52px 16px 28px;
 }
 
-.hojas {
-  position: absolute;
-  top: -8px;
-  width: 150px;
-  height: 150px;
-  pointer-events: none;
-  filter: drop-shadow(0 6px 10px rgba(0,0,0,.45));
+/* Logo del local (logo.png, con fondo transparente) */
+.cabecera .logo { margin: 0 auto; }
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.55));
 }
-.hojas-izq { left: -34px; }
-.hojas-der { right: -34px; transform: scaleX(-1); }
+.logo-portada { width: min(440px, 100%); }
+.logo-carta { width: min(270px, 70vw); }
+.cabecera:has(.logo-portada) { padding-top: 28px; }
 
 .titulo-dorado {
   font-family: "Lobster", cursive;

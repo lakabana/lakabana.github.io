@@ -31,14 +31,9 @@
       text-align: center;
       box-shadow: 0 10px 30px rgba(0,0,0,.25);
     }
-    h1 {
-      margin: 0;
-      font-family: "Lobster", cursive;
-      font-weight: 400;
-      font-size: 2.4rem;
-      color: #f2c14e;
-    }
-    .sub { margin: 6px 0 20px; color: #e3cf7d; letter-spacing: 2px; text-transform: uppercase; font-size: .8rem; font-weight: 700; }
+    h1 { margin: 0 auto; width: 280px; }
+    h1 img { display: block; width: 100%; height: auto; }
+    .sub { margin: 10px 0 20px; color: #e3cf7d; letter-spacing: 2px; text-transform: uppercase; font-size: .8rem; font-weight: 700; }
     #qr { display: inline-block; padding: 14px; border-radius: 14px; background: #fff; }
     #qr img, #qr canvas { display: block; width: 240px; height: 240px; }
     .escanea { margin: 18px 0 4px; font-size: 1.15rem; font-weight: 700; }
@@ -61,10 +56,10 @@
 </head>
 <body>
   <div class="tarjeta">
-    <h1 id="nombre">La Kabaña</h1>
-    <p class="sub">Restaurante · Pollería</p>
+    <h1><img src="logo.png" alt="La Kabaña – Restaurante Pollería" width="720" height="424"></h1>
+    <p class="sub">Carta digital</p>
     <div id="qr"></div>
-    <p class="escanea">Escanea y mira nuestra carta</p>
+    <p class="escanea">Escanea y mira nuestras cartas</p>
     <p class="url" id="url"></p>
   </div>
   <button onclick="window.print()">Imprimir</button>

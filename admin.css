@@ -46,8 +46,8 @@ code { background: var(--tarjeta-2); padding: 1px 5px; border-radius: 4px; }
   border-bottom: 1px solid var(--borde);
   background: #0f0c0a;
 }
-.barra-titulo { display: flex; flex-direction: column; line-height: 1.1; min-width: 0; }
-.marca { font-family: "Lobster", cursive; font-size: 1.6rem; color: var(--oro); }
+.barra-titulo { display: flex; align-items: center; gap: 10px; line-height: 1.1; min-width: 0; }
+.marca-logo { display: block; flex: none; width: auto; height: 46px; }
 .barra-sub { color: var(--tenue); font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 .barra-acciones { display: flex; gap: 8px; flex: none; }
 
