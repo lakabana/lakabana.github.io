@@ -316,6 +316,19 @@ body {
   padding: 0 16px 32px;
 }
 
+.pedir {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 16px 32px;
+}
+.pedir .whatsapp {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  padding: 14px 18px;
+  font-size: 1.05rem;
+}
+
 .seguir {
   max-width: 560px;
   margin: 0 auto;

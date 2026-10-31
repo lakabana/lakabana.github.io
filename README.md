@@ -17,7 +17,7 @@ Entra al **editor** y elige arriba **Restaurante** o **Pollería**. Desde ahí p
 - mover un plato a otra sección (menú **Sección**) o cambiar su orden (↑ ↓);
 - marcar un plato como **Agotado**;
 - agregar, renombrar u ordenar secciones;
-- cambiar el nombre, WhatsApp, dirección, horario y redes sociales (Facebook, Instagram, TikTok) de cada local. Las redes del Restaurante también salen en la portada.
+- cambiar el nombre, WhatsApp, dirección, horario y redes sociales (Facebook, Instagram, TikTok) de cada local. El WhatsApp (con su mensaje) y las redes del Restaurante también salen en la portada.
 
 Al terminar, pulsa **Guardar cambios**. La carta pública se actualiza en 1 o 2 minutos.
 

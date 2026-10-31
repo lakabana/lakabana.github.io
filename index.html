@@ -57,6 +57,8 @@
     </a>
   </main>
 
+  <div class="pedir" id="pedir" hidden></div>
+
   <section class="seguir" id="seguir" hidden>
     <h2 class="seguir-titulo">Síguenos en redes</h2>
     <div id="redes"></div>
@@ -64,10 +66,15 @@
 
   <script src="redes.js"></script>
   <script>
-    // Las redes de la portada son las que se cargan en el editor, en la carta del Restaurante.
+    // El WhatsApp y las redes de la portada son los que se cargan en el editor, en la carta del Restaurante.
     fetch("restaurante/menu.json", { cache: "no-cache" })
       .then((r) => r.json())
       .then((datos) => {
+        const whatsapp = pintarWhatsapp(datos.restaurante);
+        if (whatsapp) {
+          document.getElementById("pedir").append(whatsapp);
+          document.getElementById("pedir").hidden = false;
+        }
         const redes = pintarRedes(datos.restaurante);
         if (!redes) return;
         document.getElementById("redes").replaceWith(redes);
