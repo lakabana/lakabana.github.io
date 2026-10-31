@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261031">
 </head>
 <body>
   <header class="cabecera">
@@ -64,18 +64,19 @@
     <div id="redes"></div>
   </section>
 
-  <script src="redes.js"></script>
+  <script src="redes.js?v=20261031"></script>
   <script>
     // El WhatsApp y las redes de la portada son los que se cargan en el editor, en la carta del Restaurante.
     fetch("restaurante/menu.json", { cache: "no-cache" })
       .then((r) => r.json())
       .then((datos) => {
-        const whatsapp = pintarWhatsapp(datos.restaurante);
+        // Cada botón por separado: si uno falla, el otro igual se muestra.
+        const whatsapp = window.pintarWhatsapp && window.pintarWhatsapp(datos.restaurante);
         if (whatsapp) {
           document.getElementById("pedir").append(whatsapp);
           document.getElementById("pedir").hidden = false;
         }
-        const redes = pintarRedes(datos.restaurante);
+        const redes = window.pintarRedes && window.pintarRedes(datos.restaurante);
         if (!redes) return;
         document.getElementById("redes").replaceWith(redes);
         document.getElementById("seguir").hidden = false;
