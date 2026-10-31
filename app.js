@@ -35,6 +35,12 @@
     eslogan.hidden = !restaurante.eslogan;
   }
 
+  // El chat se abre con el mensaje del editor ya escrito, listo para enviar.
+  function enlaceWhatsapp() {
+    const mensaje = (restaurante.mensajeWhatsapp || "").trim();
+    return `https://wa.me/${restaurante.whatsapp}` + (mensaje ? `?text=${encodeURIComponent(mensaje)}` : "");
+  }
+
   function pintarPie() {
     const pie = document.getElementById("pie");
     const extras = [];
@@ -47,7 +53,7 @@
       icono.innerHTML =
         '<path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/>';
       extras.push(
-        el("a", { class: "whatsapp", href: `https://wa.me/${restaurante.whatsapp}`, target: "_blank", rel: "noopener" },
+        el("a", { class: "whatsapp", href: enlaceWhatsapp(), target: "_blank", rel: "noopener" },
           icono, "Escríbenos por WhatsApp")
       );
     }
